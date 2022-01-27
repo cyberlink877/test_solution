@@ -1,0 +1,38 @@
+The framework applied with the automation testing is selenium with 
+page object model to run with test cases maintained with unittest. 
+
+The framework has its entry point with file run.py. All the test cases
+are under folder testcases and each page has its own function calls under folder
+pages as well as the locators for each web elements on the page. 
+The test cases with unittest framework are written in Test_Crypto.py under folder
+testcases. Hence, when the run.py executes the python file name starting with Test. 
+Inside Test_Crypto.py will run 3 test cases, that is checking the homepage, signup page 
+and sign in page. Each page has its own web elements to control with selenium that has
+all kinds of associated actions made on web written in PublicMethod.py under folder utils. 
+Any static configuration can be stored in configfile.py under folder utils as environment 
+parameters, such as url address, username, password and etc. Finally, the report generator
+is adopted with Htmltestrunner to create the overall test cases results in html format. 
+
+
+
+The setup guide for installing the framework 
+Prerequisite for installing python 2.7 and other related version as follows:
+a) easy_install pip
+b) pip install python
+Preparation of package before running the project
+1) pip install selenium
+2) Check the drivers ready in the folder driver for chrome, otherwise please download one and place in the folder as follows:
+https://sites.google.com/a/chromium.org/chromedriver/downloads
+For running the project, 
+1) make a new folder to clone the repository from server
+2) git clone git@github.com:cyberlink877/web_automation.git
+3) pip install virtualenv
+4) virtualenv -p /usr/bin/python2.7 venv
+5) pip install -r requirements.txt
+Note: libraries required to be installed as follows:
+selenium==3.141.0
+urllib3==1.26.3
+xlrd==2.0.1
+6) source ./venv/bin/activate
+7) python run.py 
+ 
